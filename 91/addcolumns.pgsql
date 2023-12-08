@@ -1,0 +1,3 @@
+ALTER TABLE people 
+    ADD COlUMN pCity VARCHAR(50) NOT NULL,
+    ADD COlUMN pstate VARCHAR(2) NOT NULL;
