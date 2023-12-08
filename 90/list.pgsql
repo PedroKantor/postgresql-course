@@ -1,5 +1,5 @@
 CREATE TABLE lists (
     iID SERIAL PRIMARY KEY NOT NULL,
-    pID INTEGER NOT NULL REFERENCES people(pID),
+    pID INT NOT NULL REFERENCES people(pID),
     iName varchar(100) NOT NULL
 );
