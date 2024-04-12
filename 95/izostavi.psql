@@ -1,10 +1,5 @@
 -- CREATE DATABASE wishlists;
 
-DROP TABLE listitems;
-DROP TABLE  items;
-DROP TABLE lists;
-DROP TABLE  people;
-
 CREATE TABLE people
 ( pid SERIAL PRIMARY KEY,
 pFirstName VARCHAR(50) NOT NULL);
@@ -4040,3 +4035,4 @@ INSERT INTO listitems (lid, iid, lidesired, lipurchased) VALUES
 (140, 241, 17, 10),
 (781, 74, 4, 3),
 (296, 264, 14, 9);
+
