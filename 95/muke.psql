@@ -1,1 +1,1 @@
-SELECT pfirstname, plastname FROM people;
+SELECT DISTINCT pfirstname AS "ime", plastname AS "prezime",  'lives in' AS "lives in", pcity AS "grad" FROM people ORDER BY pfirstname DESC;
