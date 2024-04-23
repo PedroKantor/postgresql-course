@@ -1,0 +1,1 @@
+SELECT ROUND((1 -(CAST(liDesired - liPurchased AS NUMERIC)/CAST(liDesired AS NUMERIC)))*100,2) || '%' AS "Fulfillment" from listItems;
