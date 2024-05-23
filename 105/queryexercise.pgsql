@@ -37,9 +37,19 @@
 --SELECT department.dept,
 -- (SELECT employees.eName FROM employees WHERE employees.eid = department.eid) AS "emp name"
 -- FROM department;
-
-SELECT movies.mname AS "movie name",
-(SELECT rentals.rid FROM rentals WHERE rentals.mid = movies.mid) AS "rental trans",
-(SELECT customers.cname FROM customers WHERE customers.cid = rentals.cid) AS "customer name"
-FROM movies;
+SELECT
+	customers.cname,
+	rentals.rid,
+	movies.mname
+	FROM customers LEFT JOIN rentals USING (cid)
+		LEFT JOIN movies USING (mid);
  
+
+-- SELECT people.pfirstname,
+--      people.plastname,
+--       lists.lname,
+--        items.iname
+--        FROM people NATURAL LEFT JOIN lists
+--            NATURAL LEFT JOIN listitems
+--            NATURAL LEFT JOIN items
+--        LIMIT 10;
